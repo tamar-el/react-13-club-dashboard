@@ -8,5 +8,9 @@ import styles from './Notice.module.css'
  */
 export default function Notice({ type, children }) {
   // TODO
-  return null
+  return (
+    <div className={`${styles.notice} ${styles[type]}`}>
+      {children}
+    </div>
+  )
 }

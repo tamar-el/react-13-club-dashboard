@@ -4,40 +4,120 @@
 
 /* the card - border, padding, shadow */
 .card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #ddd;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    cursor: pointer;
+    box-sizing: border-box;
 }
-
 /* REQUIRED BY THE TESTS: the card of the selected member */
-.selected {
+.selected  {
+    border: 2px solid #2196f3;
+    background-color: #e3f2fd;
 }
-
 /* REQUIRED BY THE TESTS: an inactive member - the card looks faded */
 .inactive {
+   opacity: 0.5;
 }
 
 /* a circle with the initials, same size for all */
-.avatar {
+.avatar{
+    width: 52px;
+    height: 52px;
+    min-width: 52px;
+    border-radius: 50%;
+    background-color: #e5eaff;
+    color: #304da5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
 }
+
 
 /* the member name */
 .name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+/* the role badge */
+.badge{
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background-color: #eee;
+    font-size: 12px;
+    color: #555;
+    margin-bottom: 12px;
 }
 
-/* the role badge */
-.badge {
-}
 
 /* the small action button (disabled -> faded, no hover effect) */
 .roleButton {
+    margin-left: auto;
+    border: none;
+    border-radius: 10px;
+    padding: 9px 16px;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
 }
-
+.roleButton:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
 /* REQUIRED BY THE TESTS: the button of a Leader - blue */
 .leader {
+    background-color: #2196f3;
+}
+
+.leader:hover:not(:disabled) {
+    background-color: #1976d2;
 }
 
 /* REQUIRED BY THE TESTS: the button of a Member - green */
 .member {
+    background-color: #4caf50;
+}
+
+.member:hover:not(:disabled) {
+    background-color: #388e3c;
 }
 
 /* REQUIRED BY THE TESTS: the button of a Guest - purple */
 .guest {
+    background-color: #9c27b0;
 }
+
+.guest:hover:not(:disabled) {
+    background-color: #7b1fa2;
+}
+
+.memberInfo {
+   display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
